@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		042DF22224841D8E4354F8A2 /* Pods_Tivi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D46A0EC97E7FFD72A98929D /* Pods_Tivi.framework */; };
+		38137D722A55D6E200A687CC /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38137D712A55D6E200A687CC /* Auth.swift */; };
+		38137D772A584D1900A687CC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 38137D762A584D1900A687CC /* Settings.bundle */; };
+		385297C12C2974F3004BD20A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385297C02C2974F3004BD20A /* Extensions.swift */; };
+		833349382A4CCCEE00F464FE /* TiviApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833349372A4CCCEE00F464FE /* TiviApp.swift */; };
+		8333493A2A4CCCEE00F464FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833349392A4CCCEE00F464FE /* ContentView.swift */; };
+		8333493C2A4CCCEF00F464FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8333493B2A4CCCEF00F464FE /* Assets.xcassets */; };
+		8333493F2A4CCCEF00F464FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8333493E2A4CCCEF00F464FE /* Preview Assets.xcassets */; };
+		83447DB12C272812000DDA26 /* Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83447DB02C272812000DDA26 /* Screenshots.swift */; };
+		83447DB92C2728AD000DDA26 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83447DB82C2728AD000DDA26 /* SnapshotHelper.swift */; };
+		83AB60062A520078007FC216 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83AB60052A520078007FC216 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83447DB22C272812000DDA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8333492C2A4CCCEE00F464FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 833349332A4CCCEE00F464FE;
+			remoteInfo = Tivi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35E7DC5F16FC23B7F19CC813 /* Pods-Tivi.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tivi.prod debug.xcconfig"; path = "Target Support Files/Pods-Tivi/Pods-Tivi.prod debug.xcconfig"; sourceTree = "<group>"; };
+		38137D712A55D6E200A687CC /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		38137D762A584D1900A687CC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		38282FFD2A4F318E00E7929E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		385297C02C2974F3004BD20A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5D263D863B021AC431BCD3BC /* Pods-Tivi.prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tivi.prod release.xcconfig"; path = "Target Support Files/Pods-Tivi/Pods-Tivi.prod release.xcconfig"; sourceTree = "<group>"; };
+		7D46A0EC97E7FFD72A98929D /* Pods_Tivi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tivi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		833349342A4CCCEE00F464FE /* Tivi QA Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tivi QA Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		833349372A4CCCEE00F464FE /* TiviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiviApp.swift; sourceTree = "<group>"; };
+		833349392A4CCCEE00F464FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8333493B2A4CCCEF00F464FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8333493E2A4CCCEF00F464FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83447DAC2C272812000DDA26 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83447DB02C272812000DDA26 /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
+		83447DB82C2728AD000DDA26 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		838A698E2C4BB4F700D10870 /* Tivi-Prod-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Tivi-Prod-Debug.xcconfig"; sourceTree = "<group>"; };
+		838A698F2C4BB4F700D10870 /* UITests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UITests.xcconfig; sourceTree = "<group>"; };
+		838A69912C4BB4F700D10870 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		838A69922C4BB4F700D10870 /* Prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
+		838A69932C4BB4F700D10870 /* QA.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
+		838A69942C4BB4F700D10870 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		838A69962C4BB4F700D10870 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		838A69972C4BB4F700D10870 /* Tivi-Prod-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Tivi-Prod-Release.xcconfig"; sourceTree = "<group>"; };
+		838A69982C4BB4F700D10870 /* Tivi-QA-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Tivi-QA-Release.xcconfig"; sourceTree = "<group>"; };
+		838A69992C4BB4F700D10870 /* Tivi-QA-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Tivi-QA-Debug.xcconfig"; sourceTree = "<group>"; };
+		83AB60052A520078007FC216 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADF4E282378DC5454AB65554 /* Pods-Tivi.qa release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tivi.qa release.xcconfig"; path = "Target Support Files/Pods-Tivi/Pods-Tivi.qa release.xcconfig"; sourceTree = "<group>"; };
+		DC81C9EBAAD116665871E782 /* Pods-Tivi.qa debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tivi.qa debug.xcconfig"; path = "Target Support Files/Pods-Tivi/Pods-Tivi.qa debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		833349312A4CCCEE00F464FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				042DF22224841D8E4354F8A2 /* Pods_Tivi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83447DA92C272812000DDA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8333492B2A4CCCEE00F464FE = {
+			isa = PBXGroup;
+			children = (
+				838A694C2C4B977C00D10870 /* xcconfig */,
+				833349362A4CCCEE00F464FE /* Tivi */,
+				38137D762A584D1900A687CC /* Settings.bundle */,
+				83447DAD2C272812000DDA26 /* UITests */,
+				833349352A4CCCEE00F464FE /* Products */,
+				83AB5FFF2A51F3FD007FC216 /* Frameworks */,
+				AB036312E327DCF84387F43B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		833349352A4CCCEE00F464FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				833349342A4CCCEE00F464FE /* Tivi QA Dev.app */,
+				83447DAC2C272812000DDA26 /* UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		833349362A4CCCEE00F464FE /* Tivi */ = {
+			isa = PBXGroup;
+			children = (
+				38282FFD2A4F318E00E7929E /* Info.plist */,
+				833349372A4CCCEE00F464FE /* TiviApp.swift */,
+				833349392A4CCCEE00F464FE /* ContentView.swift */,
+				38137D712A55D6E200A687CC /* Auth.swift */,
+				8333493B2A4CCCEF00F464FE /* Assets.xcassets */,
+				8333493D2A4CCCEF00F464FE /* Preview Content */,
+				83AB60052A520078007FC216 /* GoogleService-Info.plist */,
+			);
+			path = Tivi;
+			sourceTree = "<group>";
+		};
+		8333493D2A4CCCEF00F464FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8333493E2A4CCCEF00F464FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83447DAD2C272812000DDA26 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				83447DB02C272812000DDA26 /* Screenshots.swift */,
+				83447DB82C2728AD000DDA26 /* SnapshotHelper.swift */,
+				385297C02C2974F3004BD20A /* Extensions.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		838A694C2C4B977C00D10870 /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				838A69952C4BB4F700D10870 /* common */,
+				838A69962C4BB4F700D10870 /* Project.xcconfig */,
+				838A69992C4BB4F700D10870 /* Tivi-QA-Debug.xcconfig */,
+				838A69982C4BB4F700D10870 /* Tivi-QA-Release.xcconfig */,
+				838A698E2C4BB4F700D10870 /* Tivi-Prod-Debug.xcconfig */,
+				838A69972C4BB4F700D10870 /* Tivi-Prod-Release.xcconfig */,
+				838A698F2C4BB4F700D10870 /* UITests.xcconfig */,
+			);
+			path = xcconfig;
+			sourceTree = "<group>";
+		};
+		838A69952C4BB4F700D10870 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				838A69912C4BB4F700D10870 /* Debug.xcconfig */,
+				838A69922C4BB4F700D10870 /* Prod.xcconfig */,
+				838A69932C4BB4F700D10870 /* QA.xcconfig */,
+				838A69942C4BB4F700D10870 /* Release.xcconfig */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		83AB5FFF2A51F3FD007FC216 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D46A0EC97E7FFD72A98929D /* Pods_Tivi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB036312E327DCF84387F43B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADF4E282378DC5454AB65554 /* Pods-Tivi.qa release.xcconfig */,
+				DC81C9EBAAD116665871E782 /* Pods-Tivi.qa debug.xcconfig */,
+				35E7DC5F16FC23B7F19CC813 /* Pods-Tivi.prod debug.xcconfig */,
+				5D263D863B021AC431BCD3BC /* Pods-Tivi.prod release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		833349332A4CCCEE00F464FE /* Tivi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833349422A4CCCEF00F464FE /* Build configuration list for PBXNativeTarget "Tivi" */;
+			buildPhases = (
+				B903AADBCCA69E4B1CC19BAB /* [CP] Check Pods Manifest.lock */,
+				833349452A4CCD9F00F464FE /* Build :shared KMP library */,
+				833349302A4CCCEE00F464FE /* Sources */,
+				833349312A4CCCEE00F464FE /* Frameworks */,
+				833349322A4CCCEE00F464FE /* Resources */,
+				38137D782A584D5300A687CC /* Update Settings version */,
+				83AB60022A51F473007FC216 /* Upload Crashlytics symbols */,
+				F7053C1C9CC146E93FB34871 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tivi;
+			productName = Tivi;
+			productReference = 833349342A4CCCEE00F464FE /* Tivi QA Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83447DAB2C272812000DDA26 /* UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83447DB72C272812000DDA26 /* Build configuration list for PBXNativeTarget "UITests" */;
+			buildPhases = (
+				83447DA82C272812000DDA26 /* Sources */,
+				83447DA92C272812000DDA26 /* Frameworks */,
+				83447DAA2C272812000DDA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83447DB32C272812000DDA26 /* PBXTargetDependency */,
+			);
+			name = UITests;
+			productName = UITests;
+			productReference = 83447DAC2C272812000DDA26 /* UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8333492C2A4CCCEE00F464FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					833349332A4CCCEE00F464FE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					83447DAB2C272812000DDA26 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 833349332A4CCCEE00F464FE;
+					};
+				};
+			};
+			buildConfigurationList = 8333492F2A4CCCEE00F464FE /* Build configuration list for PBXProject "Tivi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8333492B2A4CCCEE00F464FE;
+			productRefGroup = 833349352A4CCCEE00F464FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				833349332A4CCCEE00F464FE /* Tivi */,
+				83447DAB2C272812000DDA26 /* UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		833349322A4CCCEE00F464FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38137D772A584D1900A687CC /* Settings.bundle in Resources */,
+				8333493F2A4CCCEF00F464FE /* Preview Assets.xcassets in Resources */,
+				8333493C2A4CCCEF00F464FE /* Assets.xcassets in Resources */,
+				83AB60062A520078007FC216 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83447DAA2C272812000DDA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38137D782A584D5300A687CC /* Update Settings version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Update Settings version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Settings.bundle/Root.plist,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "version=\"$MARKETING_VERSION ($CURRENT_PROJECT_VERSION)\"\n/usr/libexec/PlistBuddy \\\n  \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Settings.bundle/Root.plist\" \\\n  -c \"set PreferenceSpecifiers:0:DefaultValue $version\"\n";
+		};
+		833349452A4CCD9F00F464FE /* Build :shared KMP library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build :shared KMP library";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/../..\"\n\nMODULE=\"qa\"\nif [[ $CONFIGURATION = Prod* ]]; then\n  MODULE=\"prod\"\nfi\n\necho \"Building :shared:$MODULE for $CONFIGURATION\"\n./gradlew :shared:$MODULE:embedAndSignAppleFrameworkForXcode --stacktrace\n";
+		};
+		83AB60022A51F473007FC216 /* Upload Crashlytics symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Crashlytics symbols";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\" || true\n";
+		};
+		B903AADBCCA69E4B1CC19BAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tivi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7053C1C9CC146E93FB34871 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tivi/Pods-Tivi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tivi/Pods-Tivi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tivi/Pods-Tivi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		833349302A4CCCEE00F464FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8333493A2A4CCCEE00F464FE /* ContentView.swift in Sources */,
+				38137D722A55D6E200A687CC /* Auth.swift in Sources */,
+				833349382A4CCCEE00F464FE /* TiviApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83447DA82C272812000DDA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83447DB12C272812000DDA26 /* Screenshots.swift in Sources */,
+				385297C12C2974F3004BD20A /* Extensions.swift in Sources */,
+				83447DB92C2728AD000DDA26 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83447DB32C272812000DDA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 833349332A4CCCEE00F464FE /* Tivi */;
+			targetProxy = 83447DB22C272812000DDA26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		833349402A4CCCEF00F464FE /* QA Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69962C4BB4F700D10870 /* Project.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1000;
+			};
+			name = "QA Debug";
+		};
+		833349412A4CCCEF00F464FE /* Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69962C4BB4F700D10870 /* Project.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1000;
+			};
+			name = "Prod Release";
+		};
+		833349432A4CCCEF00F464FE /* QA Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69992C4BB4F700D10870 /* Tivi-QA-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = "QA Debug";
+		};
+		833349442A4CCCEF00F464FE /* Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69972C4BB4F700D10870 /* Tivi-Prod-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = "Prod Release";
+		};
+		83447DB42C272812000DDA26 /* QA Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GLF74Y6P9T;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				PRODUCT_BUNDLE_IDENTIFIER = app.tivi.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tivi;
+			};
+			name = "QA Debug";
+		};
+		83447DB52C272812000DDA26 /* Prod Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GLF74Y6P9T;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				PRODUCT_BUNDLE_IDENTIFIER = app.tivi.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tivi;
+			};
+			name = "Prod Release";
+		};
+		83447DB62C272812000DDA26 /* QA Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GLF74Y6P9T;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				PRODUCT_BUNDLE_IDENTIFIER = app.tivi.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tivi;
+			};
+			name = "QA Release";
+		};
+		8350EE502AA8676800B6F51F /* QA Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69962C4BB4F700D10870 /* Project.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1000;
+			};
+			name = "QA Release";
+		};
+		8350EE512AA8676800B6F51F /* QA Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69982C4BB4F700D10870 /* Tivi-QA-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = "QA Release";
+		};
+		838A69A52C4BB6CF00D10870 /* Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A69962C4BB4F700D10870 /* Project.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1000;
+			};
+			name = "Prod Debug";
+		};
+		838A69A62C4BB6CF00D10870 /* Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838A698E2C4BB4F700D10870 /* Tivi-Prod-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = "Prod Debug";
+		};
+		838A69A72C4BB6CF00D10870 /* Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GLF74Y6P9T;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				PRODUCT_BUNDLE_IDENTIFIER = app.tivi.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tivi;
+			};
+			name = "Prod Debug";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8333492F2A4CCCEE00F464FE /* Build configuration list for PBXProject "Tivi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833349402A4CCCEF00F464FE /* QA Debug */,
+				838A69A52C4BB6CF00D10870 /* Prod Debug */,
+				833349412A4CCCEF00F464FE /* Prod Release */,
+				8350EE502AA8676800B6F51F /* QA Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Prod Release";
+		};
+		833349422A4CCCEF00F464FE /* Build configuration list for PBXNativeTarget "Tivi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833349432A4CCCEF00F464FE /* QA Debug */,
+				838A69A62C4BB6CF00D10870 /* Prod Debug */,
+				833349442A4CCCEF00F464FE /* Prod Release */,
+				8350EE512AA8676800B6F51F /* QA Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Prod Release";
+		};
+		83447DB72C272812000DDA26 /* Build configuration list for PBXNativeTarget "UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83447DB42C272812000DDA26 /* QA Debug */,
+				838A69A72C4BB6CF00D10870 /* Prod Debug */,
+				83447DB52C272812000DDA26 /* Prod Release */,
+				83447DB62C272812000DDA26 /* QA Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Prod Release";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8333492C2A4CCCEE00F464FE /* Project object */;
+}
