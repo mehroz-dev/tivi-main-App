@@ -1,0 +1,164 @@
+skip_docs
+
+platform :android do
+
+  lane :screenshots do
+    build_android_app(
+      task: ':android-app:app:assemble',
+      flavor: 'Qa',
+      build_type: 'Debug'
+    )
+    build_android_app(
+      task: ':android-app:app:assemble',
+      build_type: 'AndroidTest'
+    )
+    screengrab(
+      app_package_name: 'app.tivi.debug',
+      use_tests_in_packages: 'app.tivi.screenshots',
+      app_apk_path: 'android-app/app/build/outputs/apk/qa/debug/app-qa-debug.apk',
+      tests_apk_path: 'android-app/app/build/outputs/apk/androidTest/qa/debug/app-qa-debug-androidTest.apk',
+      test_instrumentation_runner: 'androidx.test.runner.AndroidJUnitRunner'
+    )
+  end
+
+  lane :publish_qa do
+    upload_to_play_store(
+      package_name: "app.tivi",
+      track: "internal",
+      aab: "android-app/app/build/outputs/bundle/qaRelease/app-qa-release.aab",
+      mapping: "android-app/app/build/outputs/mapping/qaRelease/mapping.txt",
+      json_key: "release/play-account.json"
+    )
+  end
+
+  lane :publish_prod do
+    upload_to_play_store(
+      package_name: "app.tivi",
+      track: "alpha",
+      aab: "android-app/app/build/outputs/bundle/standardRelease/app-standard-release.aab",
+      mapping: "android-app/app/build/outputs/mapping/standardRelease/mapping.txt",
+      json_key: "release/play-account.json"
+    )
+  end
+
+end
+
+platform :ios do
+
+  ios_bundle_ids = [
+    "app.tivi.client",
+    "app.tivi.qa",
+  ]
+
+  before_all do |lane|
+    cleanup_ci_keychain if is_ci
+    xcodes(select_for_current_build_only: true) if is_ci
+    cocoapods(podfile: "ios-app/Tivi")
+  end
+
+  after_all do |lane|
+    cleanup_ci_keychain if is_ci
+  end
+
+  error do |lane, exception|
+    cleanup_ci_keychain if is_ci
+  end
+
+  lane :certs do |options|
+    app_store_connect_api_key
+    match(app_identifier: ios_bundle_ids)
+  end
+
+  lane :recreate_certs do |options|
+    app_store_connect_api_key
+
+    match_nuke(
+      app_identifier: ios_bundle_ids,
+      type: "appstore"
+    )
+
+    match(app_identifier: ios_bundle_ids)
+  end
+
+  lane :lint do
+    swiftlint(
+      mode: :lint,
+      raise_if_swiftlint_error: true,
+      config_file: ".swiftlint.yml"
+    )
+  end
+
+  lane :lint_fix do
+    swiftlint(
+      mode: :fix,
+      config_file: ".swiftlint.yml"
+    )
+  end
+
+  private_lane :build_tivi do |options|
+    setup_ci if is_ci
+
+    skip_certs = env_nil_or_blank('MATCH_PASSWORD')
+
+    certs(type: 'appstore') unless skip_certs
+
+    increment_build_number(
+      xcodeproj: "ios-app/Tivi/Tivi.xcodeproj",
+      build_number: ENV['TIVI_BUILD_NUMBER']
+    ) unless env_nil_or_blank('TIVI_BUILD_NUMBER')
+
+    build_app(
+      workspace: "ios-app/Tivi/Tivi.xcworkspace",
+      scheme: options[:scheme],
+      buildlog_path: "build/fastlane-buildlog",
+      skip_package_ipa: skip_certs,
+      skip_codesigning: skip_certs
+    )
+  end
+
+  lane :build_qa do
+    build_tivi(scheme: "Tivi QA")
+  end
+
+  lane :build_prod do
+    build_tivi(scheme: "Tivi Prod")
+  end
+
+  lane :build_all do
+    build_qa
+    build_prod
+  end
+
+  lane :screenshots do
+    capture_screenshots(
+      workspace: "ios-app/Tivi/Tivi.xcworkspace",
+      scheme: "UITests",
+      headless: false,
+      skip_open_summary: true
+    )
+  end
+
+  lane :publish_qa do
+    app_store_connect_api_key
+    upload_to_testflight(app_identifier: "app.tivi.qa")
+  end
+
+  lane :publish_prod do
+    app_store_connect_api_key
+    upload_to_testflight(app_identifier: "app.tivi.client")
+  end
+
+end
+
+def cleanup_ci_keychain(name = "fastlane_tmp_keychain")
+  if File.exist? File.expand_path("~/Library/Keychains/#{name}-db")
+    puts "CI keychain exists. Deleting it and restoring the default keychain"
+    delete_keychain(name: name)
+    sh("security default-keychain -s ~/Library/Keychains/login.keychain-db")
+  end
+end
+
+def env_nil_or_blank(name)
+  value = ENV[name]
+  return value.nil? || value.empty?
+end
