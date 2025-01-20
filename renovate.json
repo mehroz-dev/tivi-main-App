@@ -1,0 +1,54 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
+      "description": "Disable updates to SNAPSHOTS",
+      "matchDatasources": ["maven"],
+      "allowedVersions": "!/SNAPSHOT$/"
+    },
+    {
+      "groupName": "Kotlin, KSP and Compose Multiplatform",
+      "groupSlug": "kotlin",
+      "matchPackageNames": [
+        "com.google.devtools.ksp",
+        "org.jetbrains.kotlin",
+        "org.jetbrains.compose"
+      ]
+    },
+    {
+      "groupName": "Firebase",
+      "groupSlug": "firebase",
+      "matchPackagePrefixes": [
+        "com.google.firebase",
+        "Firebase"
+      ]
+    },
+    {
+      "groupName": "RevenueCat Cocoapods",
+      "groupSlug": "revenuecat",
+      "matchPackagePrefixes": [
+        "PurchasesHybrid"
+      ],
+      "enabled": false
+    },
+    {
+      "groupName": "Gradle",
+      "groupSlug": "gradle",
+      "matchPackageNames": [ "gradle" ],
+      "platformAutomerge": false
+    }
+  ],
+  "ruby-version": {
+    "enabled": false
+  }
+}
