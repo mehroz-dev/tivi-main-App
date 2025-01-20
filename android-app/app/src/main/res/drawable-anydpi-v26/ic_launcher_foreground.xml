@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023, Christopher Banes and the Tivi project contributors -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M302 472.623L328.725 472.623L328.725 430.544L381.324 430.544L381.324 472.623L413.167 472.623L413.167 512.711L302 512.711L302 472.623ZM328.29 518.881L381.324 518.881L381.324 617.623L328.725 617.623L328.29 518.881Z"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:fillAlpha="0.85"
+        android:fillColor="#FFFFFF"
+        android:pathData="M432.346 406.377L484.944 406.377L484.944 447.319L432.346 447.319L432.346 406.377ZM432.346 472.623L484.944 472.623L484.944 617.623L432.346 617.623L432.346 472.623Z"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M501.688 472.623L555.423 472.623L594.374 617.623L544.05 617.623L501.688 472.623ZM580.907 543.21L600.913 472.623L652.658 472.623L610.295 617.623L601.625 617.623L580.907 543.21Z"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:fillAlpha="0.85"
+        android:fillColor="#FFFFFF"
+        android:pathData="M669.402 406.377L722 406.377L722 447.319L669.402 447.319L669.402 406.377ZM669.402 472.623L722 472.623L722 617.623L669.402 617.623L669.402 472.623Z"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+</vector>
